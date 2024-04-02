@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.FullSerializer.Internal;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Node : MonoBehaviour
 {
@@ -11,28 +12,49 @@ public class Node : MonoBehaviour
     private Renderer rend;
     public Vector3 positionOffset;
     
-    private GameObject turret;
+    [Header("Optional")]
+    public GameObject turret;
+
+    private BuildManager _buildManager;
 
     private void Start()
     {
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
+
+        _buildManager = BuildManager.instance;
+    }
+
+    public Vector3 GetBuiltPostion()
+    {
+        return transform.position + positionOffset;
     }
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+        if (!_buildManager.CanBuild)
+        {
+            return;
+        }
         if (turret != null)
         {
             //something is built
             return;
         }
 
-        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-        turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+        _buildManager.BuildTurretOn(this);
     }
 
     private void OnMouseEnter()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+        if (!_buildManager.CanBuild)
+        {
+            return;
+        }
         rend.material.color = hoverColor;
     }
 
