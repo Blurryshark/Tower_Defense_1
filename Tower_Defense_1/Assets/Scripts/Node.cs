@@ -9,6 +9,7 @@ public class Node : MonoBehaviour
 {
     public Color hoverColor;
     private Color startColor;
+    public Color notEnoughMoneyColor;
     private Renderer rend;
     public Vector3 positionOffset;
     
@@ -54,6 +55,15 @@ public class Node : MonoBehaviour
         if (!_buildManager.CanBuild)
         {
             return;
+        }
+
+        if (_buildManager.HasMoney)
+        {
+            rend.material.color = hoverColor;
+        }
+        else
+        {
+            rend.material.color = notEnoughMoneyColor;
         }
         rend.material.color = hoverColor;
     }

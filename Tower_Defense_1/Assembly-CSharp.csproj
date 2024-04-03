@@ -57,6 +57,7 @@
     <Compile Include="Assets\Scripts\BuildManager.cs" />
     <Compile Include="Assets\SimpleLightProbePlacer\Scripts\LightProbeGroupControl.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\MoneyUI.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\bullet.cs" />
     <Compile Include="Assets\Scripts\Waypoints.cs" />
