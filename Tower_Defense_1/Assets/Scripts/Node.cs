@@ -12,9 +12,13 @@ public class Node : MonoBehaviour
     public Color notEnoughMoneyColor;
     private Renderer rend;
     public Vector3 positionOffset;
+    public GameObject buildEffect;
     
-    [Header("Optional")]
+    
+    [HideInInspector]
     public GameObject turret;
+    [HideInInspector] public TurretBlueprint turretBlueprint;
+    [HideInInspector] public bool isUpgraded = false;
 
     private BuildManager _buildManager;
 
@@ -35,19 +39,53 @@ public class Node : MonoBehaviour
     {
         if (EventSystem.current.IsPointerOverGameObject())
             return;
-        if (!_buildManager.CanBuild)
-        {
-            return;
-        }
+        
         if (turret != null)
         {
-            //something is built
+            _buildManager.selectNode(this);
             return;
         }
 
-        _buildManager.BuildTurretOn(this);
+        BuildTurret(BuildManager.getTurretToBuild());
     }
 
+    void BuildTurret(TurretBlueprint blueprint)
+    {
+        if (PlayerStats.Money < blueprint.cost)
+        {
+            return;
+        }
+
+        PlayerStats.Money -= blueprint.cost;
+
+        GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuiltPostion(), Quaternion.identity);
+        turret = _turret;
+
+        turretBlueprint = blueprint;
+
+        GameObject effect = (GameObject)Instantiate(buildEffect, GetBuiltPostion(), Quaternion.identity);
+        Destroy(effect, 5f);
+    }
+
+    public void UpgradeTurret()
+    {
+        if (PlayerStats.Money < turretBlueprint.upgradeCost)
+                {
+                    return;
+                }
+        
+                PlayerStats.Money -= turretBlueprint.upgradeCost;
+
+                Destroy(turret); 
+                
+                GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab, GetBuiltPostion(), Quaternion.identity);
+                turret = _turret;
+        
+                GameObject effect = (GameObject)Instantiate(buildEffect, GetBuiltPostion(), Quaternion.identity);
+                Destroy(effect, 5);
+
+                isUpgraded = true;
+    }
     private void OnMouseEnter()
     {
         if (EventSystem.current.IsPointerOverGameObject())
