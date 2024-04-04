@@ -52,8 +52,10 @@
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\SimpleLightProbePlacer\Scripts\TransformVolume.cs" />
     <Compile Include="Assets\Scripts\Wavespawner.cs" />
+    <Compile Include="Assets\Scripts\LivesUI.cs" />
     <Compile Include="Assets\Scripts\TurretBlueprint.cs" />
     <Compile Include="Assets\Scripts\Node.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\BuildManager.cs" />
     <Compile Include="Assets\SimpleLightProbePlacer\Scripts\LightProbeGroupControl.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />

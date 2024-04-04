@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 701
     width: 1003
     height: 246
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 170
+  controlID: 109
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 171
+  controlID: 110
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 110
+  controlID: 111
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -366,7 +366,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -28368
+  m_LastSelectedObjectID: 39478
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -605,10 +605,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e85e0000
-      m_LastClickedID: 24296
-      m_ExpandedIDs: be70ffffde76ffff3091ffff8093ffffa295ffffe696ffff38f6ffffe0f9ffff18fbffff605c0000ec5c0000
+      scrollPos: {x: 0, y: 143}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: ded8fdff383affff3c3affff24fbffff645c0000f05c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1027,9 +1027,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 44.031506, y: 0.6190145, z: 8.369035}
+    m_Target: {x: 53.86884, y: 0.3698733, z: 7.82045}
     speed: 2
-    m_Value: {x: 44.031506, y: 0.6190145, z: 8.369035}
+    m_Value: {x: 4.3849487, y: 0.9839733, z: 6.3250384}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1075,13 +1075,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.077863544, y: 0.038281515, z: -0.002992293, w: -0.9962256}
+    m_Target: {x: 0.05184139, y: 0.92282045, z: -0.1338123, w: 0.3575147}
     speed: 2
-    m_Value: {x: -0.07786344, y: 0.038281467, z: -0.0029922891, w: -0.9962243}
+    m_Value: {x: 0.037433174, y: 0.27950466, z: -0.010906921, w: 0.95935243}
   m_Size:
-    m_Target: 14.0968485
+    m_Target: 7.9997435
     speed: 2
-    m_Value: 14.0968485
+    m_Value: 7.029723
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1166,9 +1166,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a6620000
-    m_LastClickedID: 25254
-    m_ExpandedIDs: 000000009862000000ca9a3bffffff7f
+    m_SelectedIDs: e6620000
+    m_LastClickedID: 25318
+    m_ExpandedIDs: 00000000d8620000e062000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1196,7 +1196,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000098620000
+    m_ExpandedIDs: 00000000d8620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1227,15 +1227,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c6230000b85a0000d25a00005e6500002a5a00005a5e0000605e000086730000627300006e7300009e8b00007a730000a67300001c670000206700001e67000022670000000000009062000074630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: buildeffectr
-      m_OriginalName: buildeffectr
+      m_Name: LaserImpact
+      m_OriginalName: LaserImpact
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -40838
+      m_UserData: 23054
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
