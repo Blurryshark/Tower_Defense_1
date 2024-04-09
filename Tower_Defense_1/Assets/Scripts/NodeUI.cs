@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class NodeUI : MonoBehaviour
@@ -11,6 +12,8 @@ public class NodeUI : MonoBehaviour
     private Node target;
     public TextMeshProUGUI upgradeCost;
     public Button upgradeButton;
+
+    public TextMeshProUGUI sellAmountText;
 
     public void SetTarget(Node node)
     {
@@ -28,6 +31,8 @@ public class NodeUI : MonoBehaviour
             upgradeButton.interactable = false;
         }
         UI.SetActive(true);
+
+        sellAmountText.text = "$" + target.turretBlueprint.GetSellAmount();
     }
 
     public void Hide()
@@ -40,4 +45,12 @@ public class NodeUI : MonoBehaviour
         target.UpgradeTurret();
         BuildManager.instance.DeselectNode();
     }
+
+    public void Sell()
+    {
+        target.SellTurret();
+        BuildManager.instance.DeselectNode();
+    }
+
+   
 }
