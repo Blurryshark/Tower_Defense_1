@@ -2,11 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject gameOverUI;
     public static bool gameIsOver;
+    public string nextLevel = "Level02";
+    public int levelToReach = 2;
+    public SceneFader sceneFader;
 
     private void Start()
     {
@@ -34,5 +38,12 @@ public class GameManager : MonoBehaviour
     {
         gameIsOver = true;
         gameOverUI.SetActive(true);
+    }
+
+    public void WinLevel()
+    {
+        PlayerPrefs.SetInt("levelReached", levelToReach);
+        sceneFader.FadeTo(nextLevel);
+
     }
 }
