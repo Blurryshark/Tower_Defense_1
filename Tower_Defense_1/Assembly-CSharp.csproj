@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Node.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\BuildManager.cs" />
+    <Compile Include="Assets\Scripts\CompleteLevel.cs" />
     <Compile Include="Assets\SimpleLightProbePlacer\Scripts\LightProbeGroupControl.cs" />
     <Compile Include="Assets\Scripts\Wave.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\bullet.cs" />
     <Compile Include="Assets\Scripts\Waypoints.cs" />
+    <Compile Include="Assets\Scripts\RoundsSurvived.cs" />
     <None Include="Assets\TerrainSampleAssets\ThirdPartyNotices.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
