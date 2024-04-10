@@ -63,6 +63,6 @@ public class Wavespawner : MonoBehaviour
 
     private void spawnEnemy(GameObject enemy)
     {
-        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+        GameObject newEnemy = Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
     }
 }
