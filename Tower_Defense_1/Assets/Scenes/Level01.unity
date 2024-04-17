@@ -18553,21 +18553,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
+  - enemy: {fileID: 4121392658113114702, guid: 67ee1094457342c44a3390939d4b54a2, type: 3}
+    count: 3
+    rate: 1
+  - enemy: {fileID: 4121392658113114702, guid: 67ee1094457342c44a3390939d4b54a2, type: 3}
+    count: 8
+    rate: 0.5
+  - enemy: {fileID: 4121392658113114702, guid: 70a0a71d7f3ca4c479e9ab1635a5657e, type: 3}
+    count: 3
+    rate: 1
+  - enemy: {fileID: 4121392658113114702, guid: c5c8a1636d2cb034eb2f2f616ba67df7, type: 3}
+    count: 10
+    rate: 1
+  - enemy: {fileID: 4121392658113114702, guid: 70a0a71d7f3ca4c479e9ab1635a5657e, type: 3}
+    count: 8
+    rate: 5
   spawnPoint: {fileID: 1739966234}
   timeBetweenWaves: 2
   waveCountdownText: {fileID: 1534164483}
@@ -25955,7 +25955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 894872546149096182, guid: 029fa97b61d2b1043821826543163f9e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 994737069208697320, guid: 029fa97b61d2b1043821826543163f9e, type: 3}
       propertyPath: m_LocalPosition.x
